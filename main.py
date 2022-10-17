@@ -27,7 +27,7 @@ logging.basicConfig(level=logging.INFO)
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher(bot)
 
-@dp.message_handler(commands=['ajuda', 'menu', 'help'])
+@dp.message_handler(commands=['ajuda', 'menu', 'help', 'start'])
 async def ajuda(message: types.Message):
     texto = """
     *Bot Engenharias FGA*
