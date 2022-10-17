@@ -18,7 +18,7 @@ buttonCalendMatricula = InlineKeyboardButton(text='Calendario de Matricula', cal
 buttonCalendAtividade = InlineKeyboardButton(text='Calendario de Atividades', callback_data='calendario_atividades')
 keybCalend = InlineKeyboardMarkup().add(buttonCalendMatricula, buttonCalendAtividade)
 
-API_TOKEN = ""
+API_TOKEN = "***REMOVED***"
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -150,14 +150,14 @@ Luciano Gonçalves Noleto: lucianonoleto@unb.br;
 
     """
 
-    await message.reply(textoEmail, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True)
+    await message.answer(textoEmail, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True)
 
 @dp.message_handler(commands=['calendario', 'calend'])
 async def calendario(message: types.Message):
     textoCalend = """
     *CALENDARIOS IMPORTANTES:*
     """
-    await message.reply(textoCalend, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True, reply_markup=keybCalend)
+    await message.answer(textoCalend, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True, reply_markup=keybCalend)
 
 @dp.message_handler(commands=['creditos', 'credito'])
 async def creditos(message: types.Message):
