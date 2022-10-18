@@ -204,6 +204,10 @@ async def competicao(message: types.Message):
     textoCompeticao = """
 UnBaja
 
+Team Titans
+
+FGR
+
 Capital Rocket Team
    """
 
