@@ -11,7 +11,7 @@ buttonEN = InlineKeyboardButton(text='Energia' , callback_data='fluxo_energia')
 buttonAT = InlineKeyboardButton(text='Automotiva' , callback_data='fluxo_automotiva')
 buttonET = InlineKeyboardButton(text='Eletrônica' , callback_data='fluxo_eletronica')
 
-keybFluxo = InlineKeyboardMarkup().add(buttonSW).add(buttonAE).add(buttonEN).add(buttonAT).add(buttonET)
+keybFluxo = InlineKeyboardMarkup().add(buttonSW).add(buttonAE).add(buttonAT)#.add(buttonET).add(buttonEN)
 
 
 buttonCalendMatricula = InlineKeyboardButton(text='Calendario de Matricula', callback_data='calendario_matricula')
