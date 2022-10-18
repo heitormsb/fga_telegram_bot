@@ -174,6 +174,8 @@ Para isso é necessario preencher este [formulário](https://john.pro.br/estagio
 @dp.message_handler(commands=['atletica', 'atleticas'])
 async def atletica(message: types.Message):
     textoAtletica = """
+    *ATLETICAS:*
+
 Atlética Pesadelo:
 [Instagram](https://www.instagram.com/atleticapesadelo/?hl=en)
    """
@@ -202,6 +204,8 @@ Eletronjun
 @dp.message_handler(commands=['competicao', 'compet'])
 async def competicao(message: types.Message):
     textoCompeticao = """
+    *EQUIPES DE COMPETIÇÃO:*
+
 UnBaja
 
 Team Titans
