@@ -214,6 +214,8 @@ Team Titans
 FGR
 
 Capital Rocket Team
+
+Obs: Caso seje de algumas dessas equipes mande para (@heitormsb) uma pequena descrição/introdução da sua equipe e forma de contato, para colocar aqui. Obrigado.
    """
 
     await message.answer(textoCompeticao, parse_mode=ParseMode.MARKDOWN)
