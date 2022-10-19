@@ -179,6 +179,8 @@ async def atletica(message: types.Message):
 
 Atlética Pesadelo:
 [Instagram](https://www.instagram.com/atleticapesadelo/?hl=en)
+
+Caso seje de algumas dessa(s) atletica(s) (ou outras da FGA) mande para @heitormsb uma pequena descrição/introdução da sua atletica e forma de contato, para colocar aqui. Obrigado.
    """
 
     await message.answer(textoAtletica, parse_mode=ParseMode.MARKDOWN)
@@ -198,6 +200,7 @@ Engrena
 
 Eletronjun 
 
+Caso seje de algumas dessas EJs (ou outras da FGA) mande para @heitormsb uma pequena descrição/introdução da sua EJ e forma de contato, para colocar aqui. Obrigado.
    """
 
     await message.answer(textoEJ, parse_mode=ParseMode.MARKDOWN)
@@ -215,7 +218,7 @@ FGR
 
 Capital Rocket Team
 
-Obs: Caso seje de algumas dessas equipes mande para (@heitormsb) uma pequena descrição/introdução da sua equipe e forma de contato, para colocar aqui. Obrigado.
+Obs: Caso seje de algumas dessas equipes (ou outras da FGA) mande para @heitormsb uma pequena descrição/introdução da sua equipe e forma de contato, para colocar aqui. Obrigado.
    """
 
     await message.answer(textoCompeticao, parse_mode=ParseMode.MARKDOWN)
