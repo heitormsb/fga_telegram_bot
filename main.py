@@ -18,7 +18,7 @@ buttonCalendMatricula = InlineKeyboardButton(text='Calendario de Matricula', cal
 buttonCalendAtividade = InlineKeyboardButton(text='Calendario de Atividades', callback_data='calendario_atividades')
 keybCalend = InlineKeyboardMarkup().add(buttonCalendMatricula, buttonCalendAtividade)
 
-API_TOKEN = "***REMOVED***"
+API_TOKEN = ""
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
