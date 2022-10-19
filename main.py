@@ -229,7 +229,7 @@ async def fluxos(call: types.CallbackQuery):
     if call.data == "fluxo_automotiva":
       await bot.send_document(call.message.chat.id, 'https://raw.githubusercontent.com/heitormsb/fga_telegram_bot/7d114f93108324a8a84f4f55a94187a3d9c2a0ca/fluxos/fluxo_automativa.pdf')
     if call.data == "fluxo_eletronica":
-      await bot.send_document(call.message.chat.id, '')
+      await bot.send_document(call.message.chat.id, 'https://raw.githubusercontent.com/heitormsb/fga_telegram_bot/61e728d0d1209e469aaae3067d93d20725e003da/fluxos/fluxo_eletronica.pdf')
 
 
 @dp.callback_query_handler(text=['calendario_atividades', 'calendario_matricula'])
