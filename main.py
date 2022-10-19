@@ -5,11 +5,11 @@ from aiogram.types import ParseMode, InlineKeyboardButton, InlineKeyboardMarkup
 
 import fluxos
 
-buttonSW = InlineKeyboardButton(text='Software', callback_data='fluxo_software')
-buttonAE = InlineKeyboardButton(text='Aeroespacial' , callback_data='fluxo_aeroespacial')
+buttonSW = InlineKeyboardButton(text='Software', callback_data='fluxo_software') #2017
+buttonAE = InlineKeyboardButton(text='Aeroespacial' , callback_data='fluxo_aeroespacial') #2018
 buttonEN = InlineKeyboardButton(text='Energia' , callback_data='fluxo_energia')
 buttonAT = InlineKeyboardButton(text='Automotiva' , callback_data='fluxo_automotiva')
-buttonET = InlineKeyboardButton(text='Eletrônica' , callback_data='fluxo_eletronica')
+buttonET = InlineKeyboardButton(text='Eletrônica' , callback_data='fluxo_eletronica') #2019
 
 keybFluxo = InlineKeyboardMarkup().add(buttonSW).add(buttonAE).add(buttonAT)#.add(buttonET).add(buttonEN)
 
@@ -54,6 +54,7 @@ FGA\_UnBot
 async def grupos(message: types.Message):
     textoGrupos = """
     *GRUPOS DOS CURSOS:*
+
 *Eng de Software*
 [https://t.me/+UnsasFZt5yRC_pvE]
 
@@ -166,7 +167,7 @@ async def creditos(message: types.Message):
 
 É possivel aproveitar na graduação de engenharias na FGA um total de 8 creditos com atividades complementares, podendo ser cursos online, projeto de pesquisa/extenxão, EJs, estagio não obrigatorio, etc.
 
-Para isso é necessario preencher este [formulário](https://john.pro.br/estagios/formulario_atividades_complementares.pdf) e enviar para xborges@unb.br com os devidos documentos necessarios.
+Para isso é necessario preencher este [formulário](https://john.pro.br/estagios/formulario_atividades_complementares.pdf) e enviar para xborges@unb.br com os devidos documentos necessarios comprobatórios.
     """
 
     await message.answer(textoCredito, parse_mode=ParseMode.MARKDOWN)
