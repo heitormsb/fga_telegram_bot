@@ -5,11 +5,11 @@ from aiogram.types import ParseMode, InlineKeyboardButton, InlineKeyboardMarkup
 
 import fluxos
 
-buttonSW = InlineKeyboardButton(text='Software', callback_data='fluxo_software') #2017
-buttonAE = InlineKeyboardButton(text='Aeroespacial' , callback_data='fluxo_aeroespacial') #2018
-buttonEN = InlineKeyboardButton(text='Energia' , callback_data='fluxo_energia')
-buttonAT = InlineKeyboardButton(text='Automotiva' , callback_data='fluxo_automotiva')
-buttonET = InlineKeyboardButton(text='Eletrônica' , callback_data='fluxo_eletronica') #2019
+buttonSW = InlineKeyboardButton(text='Software 2017', callback_data='fluxo_software') #2017
+buttonAE = InlineKeyboardButton(text='Aeroespacial 2018' , callback_data='fluxo_aeroespacial') #2018
+buttonEN = InlineKeyboardButton(text='Energia 2018' , callback_data='fluxo_energia') #2018
+buttonAT = InlineKeyboardButton(text='Automotiva 2018' , callback_data='fluxo_automotiva') #2018
+buttonET = InlineKeyboardButton(text='Eletrônica 2019' , callback_data='fluxo_eletronica') #2019
 
 keybFluxo = InlineKeyboardMarkup().add(buttonSW).add(buttonAE).add(buttonAT)#.add(buttonET).add(buttonEN)
 
@@ -225,7 +225,7 @@ async def fluxos(call: types.CallbackQuery):
     if call.data == "fluxo_aeroespacial":
       await bot.send_document(call.message.chat.id, 'https://raw.githubusercontent.com/heitormsb/fga_telegram_bot/7d114f93108324a8a84f4f55a94187a3d9c2a0ca/fluxos/fluxo_aeroespacial.pdf')
     if call.data == "fluxo_energia":
-      await bot.send_document(call.message.chat.id, '')
+      await bot.send_document(call.message.chat.id, 'https://raw.githubusercontent.com/heitormsb/fga_telegram_bot/7b6e0660caee2831dc77ff1586f4715eaa6e8e69/fluxos/fluxo_energia.pdf')
     if call.data == "fluxo_automotiva":
       await bot.send_document(call.message.chat.id, 'https://raw.githubusercontent.com/heitormsb/fga_telegram_bot/7d114f93108324a8a84f4f55a94187a3d9c2a0ca/fluxos/fluxo_automativa.pdf')
     if call.data == "fluxo_eletronica":
