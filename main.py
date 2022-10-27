@@ -10,15 +10,16 @@ buttonAE = InlineKeyboardButton(text='Aeroespacial 2018' , callback_data='fluxo_
 buttonEN = InlineKeyboardButton(text='Energia 2018' , callback_data='fluxo_energia') #2018
 buttonAT = InlineKeyboardButton(text='Automotiva 2018' , callback_data='fluxo_automotiva') #2018
 buttonET = InlineKeyboardButton(text='Eletrônica 2019' , callback_data='fluxo_eletronica') #2019
+buttonET_2021 = InlineKeyboardButton(text='Eletrônica 2021' , callback_data='fluxo_eletronica_2021') #2021
 
-keybFluxo = InlineKeyboardMarkup().add(buttonSW).add(buttonAE).add(buttonAT).add(buttonET).add(buttonEN)
+keybFluxo = InlineKeyboardMarkup().add(buttonSW).add(buttonAE).add(buttonAT).add(buttonET,buttonET_2021).add(buttonEN)
 
 
 buttonCalendMatricula = InlineKeyboardButton(text='Calendario de Matricula', callback_data='calendario_matricula')
 buttonCalendAtividade = InlineKeyboardButton(text='Calendario de Atividades', callback_data='calendario_atividades')
 keybCalend = InlineKeyboardMarkup().add(buttonCalendMatricula, buttonCalendAtividade)
 
-API_TOKEN = ""
+API_TOKEN = "***REMOVED***"
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -223,7 +224,7 @@ Obs: Caso seje de algumas dessas equipes (ou outras da FGA) mande para @heitorms
 
     await message.answer(textoCompeticao, parse_mode=ParseMode.MARKDOWN)
 
-@dp.callback_query_handler(text=['fluxo_software', 'fluxo_aeroespacial', 'fluxo_energia', 'fluxo_automotiva', 'fluxo_eletronica'])
+@dp.callback_query_handler(text=['fluxo_software', 'fluxo_aeroespacial', 'fluxo_energia', 'fluxo_automotiva', 'fluxo_eletronica', 'fluxo_eletronica_2021'])
 async def fluxos(call: types.CallbackQuery):
     if call.data == "fluxo_software":
       await bot.send_document(call.message.chat.id, 'https://raw.githubusercontent.com/heitormsb/fga_telegram_bot/7d114f93108324a8a84f4f55a94187a3d9c2a0ca/fluxos/fluxo_software.pdf')
@@ -235,7 +236,8 @@ async def fluxos(call: types.CallbackQuery):
       await bot.send_document(call.message.chat.id, 'https://raw.githubusercontent.com/heitormsb/fga_telegram_bot/7d114f93108324a8a84f4f55a94187a3d9c2a0ca/fluxos/fluxo_automativa.pdf')
     if call.data == "fluxo_eletronica":
       await bot.send_document(call.message.chat.id, 'https://raw.githubusercontent.com/heitormsb/fga_telegram_bot/61e728d0d1209e469aaae3067d93d20725e003da/fluxos/fluxo_eletronica.pdf')
-
+    if call.data == "fluxo_eletronica_2021":
+      await bot.send_document(call.message.chat.id, 'https://github.com/heitormsb/fga_telegram_bot/raw/main/fluxos/fluxo_eletronica_2021.pdf')
 
 @dp.callback_query_handler(text=['calendario_atividades', 'calendario_matricula'])
 async def fluxos(call: types.CallbackQuery):
