@@ -136,7 +136,7 @@ coordenacaofga@unb.br
 
 Coordenadores do curso:
 Software:
-Tiago Fonseca: fonsecafga@unb.br
+Ricardo Chaim: ricardoc@unb.br
 
 Aeroespacial:
 Thiago Felippe K. Cordeiro: thiagocordeiro@unb.br
