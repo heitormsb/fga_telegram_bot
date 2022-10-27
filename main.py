@@ -145,7 +145,7 @@ Automotiva:
 Fábio Cordeiro de Lisboa: fabiolisboa@unb.br
 
 Eletrônica:
-Fabiano Araujo Soares: fabianosoares@unb.br
+Marcelino Andrade: andrade@unb.br
 
 Energia:
 Luciano Gonçalves Noleto: lucianonoleto@unb.br; 
