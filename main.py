@@ -47,6 +47,8 @@ FGA\_UnBot
 /atleticas - Atleticas
 /ej - Empresas juniores
 /competicao - Equipes de competição
+
+Continue conversando pelo privado @FGA\_UnBot.
     """
 
     await message.answer(texto, parse_mode=ParseMode.MARKDOWN)
