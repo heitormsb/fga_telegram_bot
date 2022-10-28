@@ -73,7 +73,7 @@ async def grupos(message: types.Message):
 
     """
 
-    await message.answer(textoGrupos, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True)
+    await bot.send_message(message.from_user.id, textoGrupos, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True)
 
 @dp.message_handler(commands=['fluxos', 'fluxo'])
 async def fluxos(message: types.Message):
@@ -81,7 +81,7 @@ async def fluxos(message: types.Message):
     *FLUXO DOS CURSOS:*
     """
 
-    await message.answer(textoFluxo, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True, reply_markup=keybFluxo)
+    await bot.send_message(message.from_user.id, textoFluxo, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True, reply_markup=keybFluxo)
 
 @dp.message_handler(commands=['estagio', 'estagios'])
 async def estagio(message: types.Message):
@@ -121,7 +121,7 @@ Mais informações relevantes neste [Link](https://john.pro.br/estagios/)
 
    """
 
-    await message.answer(textoEstagio, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True)
+    await bot.send_message(message.from_user.id, textoEstagio, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True)
 
 @dp.message_handler(commands=['emails', 'email'])
 async def email(message: types.Message):
@@ -152,14 +152,14 @@ Luciano Gonçalves Noleto: lucianonoleto@unb.br;
 
     """
 
-    await message.answer(textoEmail, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True)
+    await bot.send_message(message.from_user.id, textoEmail, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True)
 
 @dp.message_handler(commands=['calendario', 'calend'])
 async def calendario(message: types.Message):
     textoCalend = """
     *CALENDARIOS IMPORTANTES:*
     """
-    await message.answer(textoCalend, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True, reply_markup=keybCalend)
+    await bot.send_message(message.from_user.id, textoCalend, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True, reply_markup=keybCalend)
 
 @dp.message_handler(commands=['creditos', 'credito'])
 async def creditos(message: types.Message):
@@ -171,7 +171,7 @@ async def creditos(message: types.Message):
 Para isso é necessario preencher este [formulário](https://john.pro.br/estagios/formulario_atividades_complementares.pdf) e enviar para xborges@unb.br com os devidos documentos necessarios comprobatórios.
     """
 
-    await message.answer(textoCredito, parse_mode=ParseMode.MARKDOWN)
+    await bot.send_message(message.from_user.id, textoCredito, parse_mode=ParseMode.MARKDOWN)
 
 @dp.message_handler(commands=['atletica', 'atleticas'])
 async def atletica(message: types.Message):
@@ -184,7 +184,7 @@ Atlética Pesadelo:
 Obs: Caso seje de algumas dessa(s) atletica(s) (ou outras da FGA) mande para @heitormsb uma pequena descrição/introdução da sua atletica e forma de contato, para colocar aqui. Obrigado.
    """
 
-    await message.answer(textoAtletica, parse_mode=ParseMode.MARKDOWN)
+    await bot.send_message(message.from_user.id, textoAtletica, parse_mode=ParseMode.MARKDOWN)
 
 @dp.message_handler(commands=['ej', 'ejs'])
 async def ej(message: types.Message):
@@ -193,12 +193,11 @@ async def ej(message: types.Message):
 - As Empresas juniores tem o propósito de formar líderes comprometidos e capazes para o mercado
 - Todas as EJs aceitam os 5 cursos da FGA
 
-*Zenit Aerospace*
-
 *Orc'estra Gamificação*
 Empresa Júnior de Engenharia de Software. Tem o propósito em trazer soluções de software e gamificação para o mercado. 
 Saiba mais em: [@orcgamificacao](https://www.instagram.com/orcgamificacao/) no instagram.
 
+*Zenit Aerospace*
 
 *Matriz Engenharia De Energia*
 
@@ -209,12 +208,16 @@ Saiba mais em: [@orcgamificacao](https://www.instagram.com/orcgamificacao/) no i
 Obs: Caso seje de algumas dessas EJs (ou outras da FGA) mande para @heitormsb uma pequena descrição/introdução da sua EJ e forma de contato, para colocar aqui. Obrigado.
    """
 
-    await message.answer(textoEJ, parse_mode=ParseMode.MARKDOWN)
+    await bot.send_message(message.from_user.id, textoEJ, parse_mode=ParseMode.MARKDOWN)
 
 @dp.message_handler(commands=['competicao', 'compet'])
 async def competicao(message: types.Message):
     textoCompeticao = """
     *EQUIPES DE COMPETIÇÃO:*
+
+*EDRA*
+Somos uma equipe de competição da FGA dedicada a desenvolver aeronaves autônomas de voo vertical (drones). Integramos conhecimentos de todas as áreas da engenharia em nossos projetos, por isso estamos sempre em busca de novos talentos para nos ajudar a crescer. 
+Saiba mais em: [@edraunb](https://www.instagram.com/edraunb/) no instagram.
 
 UnBaja
 
@@ -227,7 +230,7 @@ Capital Rocket Team
 Obs: Caso seje de algumas dessas equipes (ou outras da FGA) mande para @heitormsb uma pequena descrição/introdução da sua equipe e forma de contato, para colocar aqui. Obrigado.
    """
 
-    await message.answer(textoCompeticao, parse_mode=ParseMode.MARKDOWN)
+    await bot.send_message(message.from_user.id, textoCompeticao, parse_mode=ParseMode.MARKDOWN)
 
 @dp.callback_query_handler(text=['fluxo_software', 'fluxo_aeroespacial', 'fluxo_energia', 'fluxo_automotiva', 'fluxo_eletronica', 'fluxo_eletronica_2021'])
 async def fluxos(call: types.CallbackQuery):
