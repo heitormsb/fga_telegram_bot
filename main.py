@@ -12,12 +12,12 @@ buttonAT = InlineKeyboardButton(text='Automotiva 2018' , callback_data='fluxo_au
 buttonET = InlineKeyboardButton(text='Eletrônica 2019' , callback_data='fluxo_eletronica') #2019
 buttonET_2021 = InlineKeyboardButton(text='Eletrônica 2021' , callback_data='fluxo_eletronica_2021') #2021
 
-keybFluxo = InlineKeyboardMarkup().add(buttonSW).add(buttonAE).add(buttonAT).add(buttonET,buttonET_2021).add(buttonEN)
+keybFluxos = InlineKeyboardMarkup().add(buttonSW).add(buttonAE).add(buttonAT).add(buttonET,buttonET_2021).add(buttonEN)
 
 
 buttonCalendMatricula = InlineKeyboardButton(text='Calendario de Matricula', callback_data='calendario_matricula')
 buttonCalendAtividade = InlineKeyboardButton(text='Calendario de Atividades', callback_data='calendario_atividades')
-keybCalend = InlineKeyboardMarkup().add(buttonCalendMatricula, buttonCalendAtividade)
+keybCalends = InlineKeyboardMarkup().add(buttonCalendMatricula, buttonCalendAtividade)
 
 API_TOKEN = "***REMOVED***"
 
@@ -83,7 +83,7 @@ async def fluxos(message: types.Message):
     *FLUXO DOS CURSOS:*
     """
 
-    await bot.send_message(message.from_user.id, textoFluxo, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True, reply_markup=keybFluxo)
+    await bot.send_message(message.from_user.id, textoFluxo, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True, reply_markup=keybFluxos)
 
 @dp.message_handler(commands=['estagio', 'estagios'])
 async def estagio(message: types.Message):
@@ -161,7 +161,7 @@ async def calendario(message: types.Message):
     textoCalend = """
     *CALENDARIOS IMPORTANTES:*
     """
-    await bot.send_message(message.from_user.id, textoCalend, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True, reply_markup=keybCalend)
+    await bot.send_message(message.from_user.id, textoCalend, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True, reply_markup=keybCalends)
 
 @dp.message_handler(commands=['creditos', 'credito'])
 async def creditos(message: types.Message):
