@@ -5,18 +5,18 @@ from aiogram.types import ParseMode, InlineKeyboardButton, InlineKeyboardMarkup
 
 import fluxos
 
-buttonSW = InlineKeyboardButton(text='Software 2017', callback_data='fluxo_software') #2017
-buttonAE = InlineKeyboardButton(text='Aeroespacial 2018' , callback_data='fluxo_aeroespacial') #2018
-buttonEN = InlineKeyboardButton(text='Energia 2018' , callback_data='fluxo_energia') #2018
-buttonAT = InlineKeyboardButton(text='Automotiva 2018' , callback_data='fluxo_automotiva') #2018
-buttonET = InlineKeyboardButton(text='Eletrônica 2019' , callback_data='fluxo_eletronica') #2019
+buttonSW = InlineKeyboardButton(text='Software 2017', callback_data='fluxo_software2017') #2017
+buttonAE = InlineKeyboardButton(text='Aeroespacial 2018' , callback_data='fluxo_aeroespacial2018') #2018
+buttonEN = InlineKeyboardButton(text='Energia 2018' , callback_data='fluxo_energia2018') #2018
+buttonAT = InlineKeyboardButton(text='Automotiva 2018' , callback_data='fluxo_automotiva2018') #2018
+buttonET = InlineKeyboardButton(text='Eletrônica 2019' , callback_data='fluxo_eletronica2019') #2019
 buttonET_2021 = InlineKeyboardButton(text='Eletrônica 2021' , callback_data='fluxo_eletronica_2021') #2021
 
 keybFluxos = InlineKeyboardMarkup().add(buttonSW).add(buttonAE).add(buttonAT).add(buttonET,buttonET_2021).add(buttonEN)
 
 
-buttonCalendMatricula = InlineKeyboardButton(text='Calendario de Matricula', callback_data='calendario_matricula')
-buttonCalendAtividade = InlineKeyboardButton(text='Calendario de Atividades', callback_data='calendario_atividades')
+buttonCalendMatricula = InlineKeyboardButton(text='Calendario de Matricula', callback_data='calendario_matricula2022')
+buttonCalendAtividade = InlineKeyboardButton(text='Calendario de Atividades', callback_data='calendario_atividades2022')
 keybCalends = InlineKeyboardMarkup().add(buttonCalendMatricula, buttonCalendAtividade)
 
 API_TOKEN = "***REMOVED***"
@@ -234,26 +234,26 @@ Obs: Caso seje de algumas dessas equipes (ou outras da FGA) mande para @heitorms
 
     await bot.send_message(message.from_user.id, textoCompeticao, parse_mode=ParseMode.MARKDOWN)
 
-@dp.callback_query_handler(text=['fluxo_software', 'fluxo_aeroespacial', 'fluxo_energia', 'fluxo_automotiva', 'fluxo_eletronica', 'fluxo_eletronica_2021'])
+@dp.callback_query_handler(text=['fluxo_software2017', 'fluxo_aeroespacial2018', 'fluxo_energia2018', 'fluxo_automotiva2018', 'fluxo_eletronica2019', 'fluxo_eletronica_2021'])
 async def fluxos(call: types.CallbackQuery):
-    if call.data == "fluxo_software":
+    if call.data == "fluxo_software2017":
       await bot.send_document(call.message.chat.id, 'https://raw.githubusercontent.com/heitormsb/fga_telegram_bot/7d114f93108324a8a84f4f55a94187a3d9c2a0ca/fluxos/fluxo_software.pdf')
-    if call.data == "fluxo_aeroespacial":
+    if call.data == "fluxo_aeroespacial2018":
       await bot.send_document(call.message.chat.id, 'https://raw.githubusercontent.com/heitormsb/fga_telegram_bot/7d114f93108324a8a84f4f55a94187a3d9c2a0ca/fluxos/fluxo_aeroespacial.pdf')
-    if call.data == "fluxo_energia":
+    if call.data == "fluxo_energia2018":
       await bot.send_document(call.message.chat.id, 'https://raw.githubusercontent.com/heitormsb/fga_telegram_bot/7b6e0660caee2831dc77ff1586f4715eaa6e8e69/fluxos/fluxo_energia.pdf')
-    if call.data == "fluxo_automotiva":
+    if call.data == "fluxo_automotiva2018":
       await bot.send_document(call.message.chat.id, 'https://raw.githubusercontent.com/heitormsb/fga_telegram_bot/7d114f93108324a8a84f4f55a94187a3d9c2a0ca/fluxos/fluxo_automativa.pdf')
-    if call.data == "fluxo_eletronica":
+    if call.data == "fluxo_eletronica2019":
       await bot.send_document(call.message.chat.id, 'https://raw.githubusercontent.com/heitormsb/fga_telegram_bot/61e728d0d1209e469aaae3067d93d20725e003da/fluxos/fluxo_eletronica.pdf')
     if call.data == "fluxo_eletronica_2021":
       await bot.send_document(call.message.chat.id, 'https://github.com/heitormsb/fga_telegram_bot/raw/main/fluxos/fluxo_eletronica_2021.pdf')
 
-@dp.callback_query_handler(text=['calendario_atividades', 'calendario_matricula'])
+@dp.callback_query_handler(text=['calendario_atividades2022', 'calendario_matricula2022'])
 async def fluxos(call: types.CallbackQuery):
-    if call.data == "calendario_atividades":
+    if call.data == "calendario_atividades2022":
       await bot.send_document(call.message.chat.id, 'https://saa.unb.br/images/documentos/graduacao/Calendarios/Atividades/2022_2/2022_2_Calend_Atv_Grad_28_09_22.pdf')
-    if call.data == "calendario_matricula":
+    if call.data == "calendario_matricula2022":
       await bot.send_document(call.message.chat.id, 'https://saa.unb.br/images/documentos/graduacao/Calendarios/Matricula/2022_2/2022_2_Calend_Matricula_Grad.pdf')
     
 
