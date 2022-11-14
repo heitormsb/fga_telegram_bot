@@ -40,7 +40,8 @@ FGA\_UnBot
 /fluxos - Fluxogramas das Engenharias
 
 /estagio - Estágio
-/emails - Emails importantes
+/secretaria - Contatos da secretaria
+/coordenadores - Coordenadores das Engenharias
 /calendario - Calendário acadêmico
 /creditos - Aproveitamento de créditos por atividade complementar
 
@@ -128,16 +129,27 @@ Mais informações relevantes neste [Link](https://john.pro.br/estagios/)
 
     await bot.send_message(message.from_user.id, textoEstagio, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True)
 
-@dp.message_handler(commands=['emails', 'email'])
+
+@dp.message_handler(commands=['secretaria', 'sec'])
 async def email(message: types.Message):
-    textoEmail = """
-    *EMAILS IMPORTANTES:*
+    textoEmailSec = """
+    *CONTATOS SECRETARIA:*
 
 Email da Secretaria
 unbgama@unb.br
 
 Email da coordenação FGA
 coordenacaofga@unb.br
+
+    """
+
+    await bot.send_message(message.from_user.id, textoEmailSec, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True)
+
+
+@dp.message_handler(commands=['coord', 'coordenadores'])
+async def email(message: types.Message):
+    textoEmailCoord = """
+    *CONTATOS COORDENADORES:*
 
 Coordenadores do curso:
 Software:
@@ -157,7 +169,7 @@ Luciano Gonçalves Noleto: lucianonoleto@unb.br;
 
     """
 
-    await bot.send_message(message.from_user.id, textoEmail, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True)
+    await bot.send_message(message.from_user.id, textoEmailCoord, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True)
 
 @dp.message_handler(commands=['calendario', 'calend'])
 async def calendario(message: types.Message):
@@ -224,13 +236,16 @@ async def competicao(message: types.Message):
 Somos uma equipe de competição da FGA dedicada a desenvolver aeronaves autônomas de voo vertical (drones). Integramos conhecimentos de todas as áreas da engenharia em nossos projetos, por isso estamos sempre em busca de novos talentos para nos ajudar a crescer. 
 Saiba mais em: [@edraunb](https://www.instagram.com/edraunb/) no instagram.
 
+*Capital Rocket Team*
+A Capital Rocket Team(CRT) é uma equipe de foguetes da categoria high power rocketry do curso de engenharia aeroespacial da UnB, campus do gama, foi fundado no ano de 2015, e é composta por membros de diversos cursos da universidade de Brasília. A equipe é conhecida nacional e internacionalmente por trabalhar como propulsão híbrida, sendo pioneira nesse tipo de propulsão no meio das equipes de competição no Brasil, e tendo se consagrado como a primeira a lançar um foguete movido a propulsão híbrida em uma competição na América Latina, na Latin America Space Challenge 2022.
+Saiba mais em: [@capitalrocketteam](https://www.instagram.com/capitalrocketteam/) no instagram ou pelo [Site](www.capitalrocketteam.com).
+
 UnBaja
 
 Team Titans
 
 FGR
 
-Capital Rocket Team
 
 Obs: Caso seje de algumas dessas equipes (ou outras da FGA) mande para @heitormsb uma pequena descrição/introdução da sua equipe e forma de contato, para colocar aqui. Obrigado.
    """
