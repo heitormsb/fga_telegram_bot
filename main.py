@@ -58,6 +58,9 @@ async def grupos(message: types.Message):
     textoGrupos = """
     *GRUPOS DOS CURSOS:*
 
+*Grupo Engenharias*
+[https://t.me/+O0-Buip5BF5iZTgx]
+
 *Eng de Software*
 [https://t.me/+UnsasFZt5yRC_pvE]
 
