@@ -2,6 +2,8 @@ from aiogram import Dispatcher, types
 from aiogram.types import ParseMode
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
+from .text import textoFluxo
+
 buttonSW = InlineKeyboardButton(text='Software 2017', callback_data='fluxo_software2017') #2017
 buttonAE = InlineKeyboardButton(text='Aeroespacial 2018' , callback_data='fluxo_aeroespacial2018') #2018
 buttonEN = InlineKeyboardButton(text='Energia 2018' , callback_data='fluxo_energia2018') #2018
@@ -13,9 +15,6 @@ keybFluxos = InlineKeyboardMarkup().add(buttonSW).add(buttonAE).add(buttonAT).ad
 
 async def fluxos(message: types.Message):
     from main import bot
-    textoFluxo = """
-    *FLUXO DOS CURSOS:*
-    """
 
     if(message.chat.type != 'private'):
         await bot.delete_message(message.chat.id, message.message_id)

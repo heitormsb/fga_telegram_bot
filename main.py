@@ -12,23 +12,9 @@ from aiogram import Bot, Dispatcher, executor, types
 from aiogram.types import ParseMode, InlineKeyboardButton, InlineKeyboardMarkup
 from aiogram.contrib.fsm_storage.memory import MemoryStorage
 
-import fluxos
-
-buttonSW = InlineKeyboardButton(text='Software 2017', callback_data='fluxo_software2017') #2017
-buttonAE = InlineKeyboardButton(text='Aeroespacial 2018' , callback_data='fluxo_aeroespacial2018') #2018
-buttonEN = InlineKeyboardButton(text='Energia 2018' , callback_data='fluxo_energia2018') #2018
-buttonAT = InlineKeyboardButton(text='Automotiva 2018' , callback_data='fluxo_automotiva2018') #2018
-buttonET = InlineKeyboardButton(text='Eletrônica 2019' , callback_data='fluxo_eletronica2019') #2019
-buttonET_2021 = InlineKeyboardButton(text='Eletrônica 2021' , callback_data='fluxo_eletronica_2021') #2021
-
-keybFluxos = InlineKeyboardMarkup().add(buttonSW).add(buttonAE).add(buttonAT).add(buttonET,buttonET_2021).add(buttonEN)
-
-
 buttonCalendMatricula = InlineKeyboardButton(text='Calendario de Matricula', callback_data='calendario_matricula2022')
 buttonCalendAtividade = InlineKeyboardButton(text='Calendario de Atividades', callback_data='calendario_atividades2022')
 keybCalends = InlineKeyboardMarkup().add(buttonCalendMatricula, buttonCalendAtividade)
-
-# API_TOKEN = "***REMOVED***"
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -49,7 +35,7 @@ register_handlers_grupos(dp)
 # Comando de menu dos fluxos | comandos: 'fluxos', 'fluxo'
 register_handlers_fluxos(dp)
 
-# comando de ajuda estagio | comandos: 'estagio', 'estágios'
+# comando de estagios | comandos: 'estagio', 'estágios'
 register_handlers_estagio(dp)
 
 @dp.message_handler(commands=['estagio', 'estagios'])
