@@ -1,5 +1,4 @@
-.__pycache__
+__pycache__/
+config.py
 .DS_Store
 .git
-.config.py
-.config
