@@ -6,6 +6,8 @@ from handlers.ouvidoria.ouvidoria import register_handlers_ouvidoria
 from handlers.fluxos.fluxos import register_handlers_fluxos
 from handlers.estagio.estagio import register_handlers_estagio
 
+from config import API_TOKEN
+
 from aiogram import Bot, Dispatcher, executor, types
 from aiogram.types import ParseMode, InlineKeyboardButton, InlineKeyboardMarkup
 from aiogram.contrib.fsm_storage.memory import MemoryStorage
@@ -26,7 +28,7 @@ buttonCalendMatricula = InlineKeyboardButton(text='Calendario de Matricula', cal
 buttonCalendAtividade = InlineKeyboardButton(text='Calendario de Atividades', callback_data='calendario_atividades2022')
 keybCalends = InlineKeyboardMarkup().add(buttonCalendMatricula, buttonCalendAtividade)
 
-API_TOKEN = "***REMOVED***"
+# API_TOKEN = "***REMOVED***"
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
