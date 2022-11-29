@@ -1,12 +1,13 @@
 import logging
 from handlers.common import register_handlers_common
+
 from handlers.ajuda.ajuda import register_handlers_ajuda
 from handlers.grupos.grupos import register_handlers_grupos
-from handlers.ouvidoria.ouvidoria import register_handlers_ouvidoria
 from handlers.fluxos.fluxos import register_handlers_fluxos
 from handlers.estagio.estagio import register_handlers_estagio
+from handlers.ouvidoria.ouvidoria import register_handlers_ouvidoria
 
-from config import API_TOKEN
+from env import API_TOKEN
 
 from aiogram import Bot, Dispatcher, executor, types
 from aiogram.types import ParseMode, InlineKeyboardButton, InlineKeyboardMarkup
