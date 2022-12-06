@@ -9,7 +9,7 @@ Diretrizes de estágios importantes:
 Cordenadores de estágio:
 *Engenharia Aeroespacial:* Prof. Artem Andrianov (andrianov@unb.br)
 
-*Engenharia Automotiva:* Prof.ª Rita de Cássia Silva (ritasilva@unb.br)
+*Engenharia Automotiva:* Prof.ª Critian Vendittozzi (estagioautomotivaunb@gmail.com)
 
 *Engenharia de Energia:* Prof.ª Maria Del Pilar Hidalgo Falla (pilar@unb.br)
 
